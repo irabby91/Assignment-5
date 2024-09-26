@@ -1,11 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="Styles/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- for text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        .lexend-font {
+            font-family: "Lexend", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: <weight>;
+            font-style: normal;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <header>
+        <nav class="flex justify-around pt-[24.5px] pb-[50px] bg-[#F9F7F3]">
+            <div class="h-[49px] w-[110px] bg-[#B4F461] text-center justify-center rounded-[8px] pt-2">
+                <button class="lexend-font text-[20px] font-semibold text-[#111111]">Blog</button>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <img src="Styles/assets/logo.png" alt="">
+                <h3 class="lexend-font text-[20px] font-semibold text-[#111111]">Donate Bangladesh</h3>
+            </div>
+            <div class="flex items-center gap-4">
+                <img src="Styles/assets/coin.png" alt="">
+                <div id="my-balance" class="stat-value lexend-font text-[20px] font-medium text-[#111111]">5000</div>
+                <div class="stat-value lexend-font text-[20px] font-medium text-[#111111]">BDT</div>
+
+            </div>
+        </nav>
+    </header>
+    <main class="px-[190px] py-[190px]">
+
+        <!-- First hero section Start -->
+        <div class="flex content-center border-2 border-[#1111111A] p-4 rounded-[16px] w-[1140px] mt-[32px] ">
+            <div class="flex flex-row gap-[32px]">
+                <img class="w-[522px] h-[389px]" src="Styles/assets/noakhali.png" alt="">
+                <div class="flex flex-col gap-4">
+                    <div class="flex gap-1 h-[44px] w-[110px] bg-[#1111110D] items-center rounded-[8px] px-[16px] ">
+                        <img src="Styles/assets/coin.png" alt="">
+                        <h3 id="donated-amount">0</h3>
+                        <h3>BDT</h3>
+                    </div>
+                    <h3 class="lexend-font text-[20px] font-bold">Donate for Flood at Noakhali, Bangladesh</h3>
+                    <p class="lexend-font text-[16px] font-light text-[#111111B3]"> The recent floods in Noakhali have
+                        caused significant damage to <br> homes infrastructure. Your
+                        donation will help provide essential <br> supplies and to those affected by this disaster. Every
+                        contribution, <br> big or small, makes difference. Please join us in supporting the relief <br>
+                        efforts
+                        and making a positive impact on the lives of those in need.</p>
+                    <input id="donation-box" type="text" placeholder="Write Donation Amount"
+                        class="input input-bordered w-[522px]" required autocomplete="off" />
+                    <button id="donate-btn"
+                        class="btn-primary w-[522px] h-[57px] rounded-[8px] bg-[#B4F461] lexend-font text-[20px] font-semibold text-[#111111]">Donate
+                        Now</button>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- First Hero Section End -->
+
+        <!-- second hero part start -->
+        <div class="flex content-center border-2 border-[#1111111A] p-4 rounded-[16px] w-[1140px] mt-[32px] ">
+            <div class="flex flex-row gap-[32px]">
+                <img class="w-[522px] h-[389px]" src="Styles/assets/feni.png" alt="">
+                <div class="flex flex-col gap-4">
+                    <div class="flex gap-1 h-[44px] w-[110px] bg-[#1111110D] items-center rounded-[8px] px-[16px] ">
+                        <img src="Styles/assets/coin.png" alt="">
+                        <h3 id="donated-amount">0</h3>
+                        <h3>BDT</h3>
+                    </div>
+                    <h3 class="lexend-font text-[20px] font-bold">Donate for Flood Relief in Feni,Bangladesh</h3>
+                    <p class="lexend-font text-[16px] font-light text-[#111111B3]"> The recent floods in Feni have
+                        devastated local communities, leading <br> to severe disruption and loss. Your generous donation
+                        will help <br> provide immediate aid, including food, clean water, and medical <br> supplies, to
+                        those affected by this calamity. Together, we can offer <br> crucial support and help rebuild
+                        lives in the aftermath of this disaster. <br> Every contribution counts towards making a real
+                        difference. Please <br> consider donating today to assist those in urgent need.</p>
+                    <input id="donation-box" type="text" placeholder="Write Donation Amount"
+                        class="input input-bordered w-[522px]" required autocomplete="off" />
+                    <button id="donate-btn"
+                        class="btn-primary w-[522px] h-[57px] rounded-[8px] bg-[#B4F461] lexend-font text-[20px] font-semibold text-[#111111]">Donate
+                        Now</button>
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+
+    <script src="java.js"></script>
 </body>
+
 </html>
