@@ -25,13 +25,16 @@
 </head>
 
 <body>
-    <header>
-        <nav class="flex justify-around pt-[24.5px] pb-[50px] bg-[#F9F7F3]">
+    <header class="sticky top-0 w-full z-50 max-sm:justify-center ">
+        <nav class="flex justify-around pt-[24.5px] pb-[50px] bg-[#F9F7F3] max-sm:items-center">
             <div class="h-[49px] w-[110px] bg-[#B4F461] text-center justify-center rounded-[8px] pt-2">
-                <button class="lexend-font text-[20px] font-semibold text-[#111111]">Blog</button>
+                <a href="/blogpage.html" target="_blank">
+                    <button class="lexend-font text-[20px] font-semibold text-[#111111]">Blog</button>
+                </a>
             </div>
 
-            <div class="flex items-center gap-4">
+
+            <div class="flex items-center gap-4 max-sm:flex-col">
                 <img src="Styles/assets/logo.png" alt="">
                 <h3 class="lexend-font text-[20px] font-semibold text-[#111111]">Donate Bangladesh</h3>
             </div>
@@ -42,71 +45,125 @@
 
             </div>
         </nav>
-    </header>
-    <main class="px-[190px] py-[190px]">
+        <div class="flex gap-2 justify-center mt-[80px]">
+            <button id="Donation-btn"
+                class="lexend-font text-[20px] font-semibold text-[#111111] h-[57px] w-[157px] bg-[#ffffff] border-2 text-center justify-center rounded-[8px]">Donation</button>
 
-        <!-- First hero section Start -->
-        <div class="flex content-center border-2 border-[#1111111A] p-4 rounded-[16px] w-[1140px] mt-[32px] ">
-            <div class="flex flex-row gap-[32px]">
-                <img class="w-[522px] h-[389px]" src="Styles/assets/noakhali.png" alt="">
-                <div class="flex flex-col gap-4">
-                    <div class="flex gap-1 h-[44px] w-[110px] bg-[#1111110D] items-center rounded-[8px] px-[16px] ">
+            <button id="history-btn"
+                class=" lexend-font text-[20px] font-semibold text-[#111111] h-[57px] w-[157px] bg-[#ffffff] border-2 text-center justify-center rounded-[8px]">History</button>
+        </div>
+
+        <div class="divider"></div>
+        <!-- max-sm:w-[90%] max-sm:w-[auto] max-sm:flex-col -->
+    </header>
+    <main class="flex flex-col items-center justify-center w-full mt-[100px]">
+        <div id="donation-form-section" class="hidden flex flex-col justify-center  ">
+            <!-- First hero section Start -->
+            <!-- First hero section Start -->
+            <div
+                class="flex flex-col sm:flex-row justify-center border-2 border-[#1111111A] p-4 rounded-[16px] w-full max-w-[1140px] mt-[32px] mx-auto">
+                <img class="w-full h-[441px] sm:w-[522px] sm:h-[441px] object-cover rounded-t-[16px] sm:rounded-l-[16px] sm:rounded-t-none"
+                    src="Styles/assets/noakhali.png" alt="">
+                <div class="flex flex-col gap-4 p-4">
+                    <div
+                        class="flex gap-1 h-[44px] w-[160px] bg-[#1111110D] items-center justify-center rounded-[8px] px-[16px]">
                         <img src="Styles/assets/coin.png" alt="">
-                        <h3 id="donated-amount">0</h3>
+                        <h3 id="noa-donated-amount">0</h3>
                         <h3>BDT</h3>
                     </div>
                     <h3 class="lexend-font text-[20px] font-bold">Donate for Flood at Noakhali, Bangladesh</h3>
-                    <p class="lexend-font text-[16px] font-light text-[#111111B3]"> The recent floods in Noakhali have
-                        caused significant damage to <br> homes infrastructure. Your
-                        donation will help provide essential <br> supplies and to those affected by this disaster. Every
-                        contribution, <br> big or small, makes difference. Please join us in supporting the relief <br>
-                        efforts
-                        and making a positive impact on the lives of those in need.</p>
-                    <input id="donation-box" type="text" placeholder="Write Donation Amount"
-                        class="input input-bordered w-[522px]" required autocomplete="off" />
-                    <button id="donate-btn"
-                        class="btn-primary w-[522px] h-[57px] rounded-[8px] bg-[#B4F461] lexend-font text-[20px] font-semibold text-[#111111]">Donate
+                    <p class="lexend-font text-[16px] font-light text-[#111111B3]">
+                        The recent floods in Noakhali have caused significant damage to homes infrastructure. Your
+                        donation will help provide essential supplies and to those affected by this disaster. Every
+                        contribution, big or small, makes a difference. Please join us in supporting the relief efforts
+                        and making a positive impact on the lives of those in need.
+                    </p>
+                    <input id="noa-donation-input" type="text" placeholder="Write Donation Amount"
+                        class="input input-bordered w-full sm:w-[522px]" required autocomplete="off" />
+                    <button id="noa-donate-btn"
+                        class="btn-primary w-full sm:w-[522px] h-[57px] rounded-[8px] bg-[#B4F461] lexend-font text-[20px] font-semibold text-[#111111]">Donate
                         Now</button>
-
-
                 </div>
             </div>
-        </div>
-        <!-- First Hero Section End -->
+            <!-- First Hero Section End -->
 
-        <!-- second hero part start -->
-        <div class="flex content-center border-2 border-[#1111111A] p-4 rounded-[16px] w-[1140px] mt-[32px] ">
-            <div class="flex flex-row gap-[32px]">
-                <img class="w-[522px] h-[389px]" src="Styles/assets/feni.png" alt="">
-                <div class="flex flex-col gap-4">
-                    <div class="flex gap-1 h-[44px] w-[110px] bg-[#1111110D] items-center rounded-[8px] px-[16px] ">
-                        <img src="Styles/assets/coin.png" alt="">
-                        <h3 id="donated-amount">0</h3>
-                        <h3>BDT</h3>
+            <!-- second hero part start -->
+            <div
+                class="flex flex-col max-sm:flex-col border-2 border-[#1111111A] p-4 rounded-[16px] w-full max-w-[1140px] mt-[32px] mx-auto">
+                <div class="flex flex-col max-sm:w-full max-sm:flex-col">
+                    <img class="w-full h-[441px] max-sm:h-[300px] object-cover rounded-t-[16px] max-sm:rounded-[16px]"
+                        src="Styles/assets/feni.png" alt="">
+                    <div class="flex flex-col gap-4 p-4">
+                        <div
+                            class="flex gap-1 h-[44px] w-[160px] bg-[#1111110D] items-center justify-center rounded-[8px] px-[16px]">
+                            <img src="Styles/assets/coin.png" alt="">
+                            <h3 id="feni-donated-amount">0</h3>
+                            <h3>BDT</h3>
+                        </div>
+                        <h3 class="lexend-font text-[20px] font-bold">Donate for Flood Relief in Feni, Bangladesh</h3>
+                        <p class="lexend-font text-[16px] font-light text-[#111111B3]">
+                            The recent floods in Feni have devastated local communities, leading to severe disruption
+                            and loss. Your generous donation will help provide immediate aid, including food, clean
+                            water, and medical supplies, to those affected by this calamity. Together, we can offer
+                            crucial support and help rebuild lives in the aftermath of this disaster. Every contribution
+                            counts towards making a real difference. Please consider donating today to assist those in
+                            urgent need.
+                        </p>
+                        <input id="feni-donation-input" type="text" placeholder="Write Donation Amount"
+                            class="input input-bordered w-full max-sm:w-full" required autocomplete="off" />
+                        <button id="feni-donate-btn"
+                            class="btn-primary w-full max-sm:w-full h-[57px] rounded-[8px] bg-[#B4F461] lexend-font text-[20px] font-semibold text-[#111111]">Donate
+                            Now</button>
                     </div>
-                    <h3 class="lexend-font text-[20px] font-bold">Donate for Flood Relief in Feni,Bangladesh</h3>
-                    <p class="lexend-font text-[16px] font-light text-[#111111B3]"> The recent floods in Feni have
-                        devastated local communities, leading <br> to severe disruption and loss. Your generous donation
-                        will help <br> provide immediate aid, including food, clean water, and medical <br> supplies, to
-                        those affected by this calamity. Together, we can offer <br> crucial support and help rebuild
-                        lives in the aftermath of this disaster. <br> Every contribution counts towards making a real
-                        difference. Please <br> consider donating today to assist those in urgent need.</p>
-                    <input id="donation-box" type="text" placeholder="Write Donation Amount"
-                        class="input input-bordered w-[522px]" required autocomplete="off" />
-                    <button id="donate-btn"
-                        class="btn-primary w-[522px] h-[57px] rounded-[8px] bg-[#B4F461] lexend-font text-[20px] font-semibold text-[#111111]">Donate
-                        Now</button>
-
-
                 </div>
             </div>
-        </div>
 
+            <!-- Second hero part end -->
 
+            <!-- Third Hero Part Start -->
+            <div
+                class="flex flex-col border-2 border-[#1111111A] p-4 rounded-[16px] w-full max-w-[1140px] mt-[32px] mx-auto">
+                <div class="flex flex-col max-sm:flex-col">
+                    <img class="w-full h-[441px] max-sm:h-[300px]  object-cover rounded-t-[16px] max-sm:rounded-[16px]"
+                        src="Styles/assets/quota-protest.png" alt="">
+                    <div class="flex flex-col gap-4 p-4">
+                        <div
+                            class="flex gap-1 h-[44px] w-[160px] bg-[#1111110D] items-center justify-center rounded-[8px] px-[16px]">
+                            <img src="Styles/assets/coin.png" alt="">
+                            <h3 id="quota-donated-amount">0</h3>
+                            <h3>BDT</h3>
+                        </div>
+                        <h3 class="lexend-font text-[20px] font-bold">Aid for Injured in the Quota Movement</h3>
+                        <p class="lexend-font text-[16px] font-light text-[#111111B3]">
+                            The recent Quota movement has resulted in numerous injuries and significant hardship for
+                            many individuals. Your support is crucial in providing medical assistance, rehabilitation,
+                            and necessary supplies to those affected. By contributing, you help ensure that injured
+                            individuals receive the care and support they need during this challenging time. Every
+                            donation plays a vital role in alleviating their suffering and aiding in their recovery.
+                            Please consider making a donation to support these brave individuals in their time of need.
+                        </p>
+                        <input id="quota-donation-input" type="text" placeholder="Write Donation Amount"
+                            class="input input-bordered w-full" required autocomplete="off" />
+                        <button id="quota-donate-btn"
+                            class="btn-primary w-full h-[57px] rounded-[8px] bg-[#B4F461] lexend-font text-[20px] font-semibold text-[#111111]">Donate
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Third hero part end here -->
+
+            <!-- History part -->
+            <div id="history-container" class="hidden flex flex-col gap-6 mb-[100px]">
+
+            </div>
     </main>
 
-
-    <script src="java.js"></script>
+    <script src="JS/commonfunction.js"></script>
+    <script src="JS/Noakhali.js"></script>
+    <script src="JS/feni.js"></script>
+    <script src="JS/quota.js"></script>
+    <script src="JS/feature.js"></script>
 </body>
 
 </html>

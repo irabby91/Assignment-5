@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <main class="flex flex-col items-center h-screen">
+        <div class="collapse collapse-arrow bg-[#ffff] border-2 mt-[50px] w-[1140px] max-sm:w-[90%]">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-xl font-medium">What is DOM</div>
+            <div class="collapse-content">
+                <p>The DOM (Document Object Model) is a programming interface for web documents. It represents the
+                    structure of an HTML or XML document as a tree of objects. Each node in this tree corresponds to a
+                    part of the document (such as an element, attribute, or piece of text), and you can manipulate these
+                    nodes with programming languages like JavaScript.</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-[#ffff] border-2 mt-[50px] w-[1140px] max-sm:w-[90%]">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">How does it work</div>
+            <div class="collapse-content">
+                <p>1.Browser Reads HTML: When the browser loads an HTML page, it looks at all the tags and content, like
+                    <em> <b>div,</b> </em> <em><b>h1,</b></em> <em><b>p,</b></em> and turns them into a DOM tree. <br>
+                    2.JavaScript Can Access and Change the DOM:
+
+                    Find elements: You can use JavaScript to find parts of the page, like headings or
+                    paragraphs.
+                    Change content: You can change what these elements say or how they look.
+                    Add or remove elements: You can add new things or remove parts from the page. <br>
+                    3.Handling User Actions: The DOM also lets you respond to user actions (like clicks, typing,
+                    etc.). You can add event listeners to elements and do something when the user interacts.
+                </p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-[#ffff] border-2 mt-[50px] w-[1140px] max-sm:w-[90%]">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">What is a DOM event</div>
+            <div class="collapse-content">
+                <p>A DOM event is an action that happens on a web page, like clicking a button, typing in a text box, or loading the page. JavaScript can respond to these events to make the page interactive.</p>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
