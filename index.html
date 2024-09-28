@@ -38,7 +38,7 @@
                 <img src="Styles/assets/logo.png" alt="">
                 <h3 class="lexend-font text-[20px] font-semibold text-[#111111]">Donate Bangladesh</h3>
             </div>
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-2 max-sm:flex-col max-sm:gap-1">
                 <img src="Styles/assets/coin.png" alt="">
                 <div id="my-balance" class="stat-value lexend-font text-[20px] font-medium text-[#111111]">5000</div>
                 <div class="stat-value lexend-font text-[20px] font-medium text-[#111111]">BDT</div>
@@ -46,7 +46,7 @@
             </div>
         </nav>
         <div class="flex gap-2 justify-center mt-[80px]">
-            <button id="Donation-btn"
+            <button id="donation-btn"
                 class="lexend-font text-[20px] font-semibold text-[#111111] h-[57px] w-[157px] bg-[#ffffff] border-2 text-center justify-center rounded-[8px]">Donation</button>
 
             <button id="history-btn"
@@ -54,11 +54,27 @@
         </div>
 
         <div class="divider"></div>
-        <!-- max-sm:w-[90%] max-sm:w-[auto] max-sm:flex-col -->
     </header>
     <main class="flex flex-col items-center justify-center w-full mt-[100px]">
+        <!-- Card Appear when Donate now button clicked -->
+        <div id="display-card" class="hidden">
+            <div class="fixed inset-0 backdrop-blur-md bg-black bg-opacity-30 z-40"></div>
+            <div class="fixed inset-40 flex items-center justify-center z-50">
+                <div
+                    class="h-[300px] w-[500px] border-2 flex flex-col justify-center items-center rounded-[16px] gap-2 bg-white shadow-lg">
+                    <h3 class="lexend-font text-[24px] font-bold text-[#111111]">Congratulations!</h3>
+                    <img src="Styles/assets/coin.png" alt="">
+                    <p class="lexend-font text-[14px] text-[#111111]">You Have Donated For Humankind</p>
+                    <h3 class="lexend-font text-[24px] font-bold text-[#111111]">Successfully</h3>
+                    <button id="close-information-btn"
+                        class="lexend-font text-[14px] font-normal text-[#111111] h-[57px] w-[157px] bg-[#1111110D] border-2 text-center justify-center rounded-[8px]">Close
+                        Information</button>
+                </div>
+            </div>
+        </div>
+
         <div id="donation-form-section" class="hidden flex flex-col justify-center  ">
-            <!-- First hero section Start -->
+
             <!-- First hero section Start -->
             <div
                 class="flex flex-col sm:flex-row justify-center border-2 border-[#1111111A] p-4 rounded-[16px] w-full max-w-[1140px] mt-[32px] mx-auto">
@@ -89,8 +105,8 @@
 
             <!-- second hero part start -->
             <div
-                class="flex flex-col max-sm:flex-col border-2 border-[#1111111A] p-4 rounded-[16px] w-full max-w-[1140px] mt-[32px] mx-auto">
-                <div class="flex flex-col max-sm:w-full max-sm:flex-col">
+                class="flex max-sm:flex-col border-2 border-[#1111111A] p-4 rounded-[16px] w-full max-w-[1140px] mt-[32px] mx-auto">
+                <div class="flex max-sm:w-full max-sm:flex-col">
                     <img class="w-full h-[441px] max-sm:h-[300px] object-cover rounded-t-[16px] max-sm:rounded-[16px]"
                         src="Styles/assets/feni.png" alt="">
                     <div class="flex flex-col gap-4 p-4">
@@ -121,9 +137,8 @@
             <!-- Second hero part end -->
 
             <!-- Third Hero Part Start -->
-            <div
-                class="flex flex-col border-2 border-[#1111111A] p-4 rounded-[16px] w-full max-w-[1140px] mt-[32px] mx-auto">
-                <div class="flex flex-col max-sm:flex-col">
+            <div class="flex  border-2 border-[#1111111A] p-4 rounded-[16px] w-full max-w-[1140px] mt-[32px] mx-auto">
+                <div class="flex  max-sm:flex-col">
                     <img class="w-full h-[441px] max-sm:h-[300px]  object-cover rounded-t-[16px] max-sm:rounded-[16px]"
                         src="Styles/assets/quota-protest.png" alt="">
                     <div class="flex flex-col gap-4 p-4">
@@ -152,11 +167,12 @@
             </div>
 
             <!-- Third hero part end here -->
+        </div>
+        <!-- History part -->
+        <div id="history-container" class="hidden flex flex-col gap-3">
 
-            <!-- History part -->
-            <div id="history-container" class="hidden flex flex-col gap-6 mb-[100px]">
+        </div>
 
-            </div>
     </main>
 
     <script src="JS/commonfunction.js"></script>
@@ -164,6 +180,8 @@
     <script src="JS/feni.js"></script>
     <script src="JS/quota.js"></script>
     <script src="JS/feature.js"></script>
+    <script src="JS/closeinformtaion.js"></script>
+
 </body>
 
 </html>
